@@ -1,17 +1,76 @@
+$op: 0.8; //Прозрачность шрифта
+@font-face {
 
+    font-family: Alegreya Sans; /* Имя шрифта */
+    
+    src: url(AlegreyaSans-Medium.ttf); /* Путь к файлу со шрифтом */
+    
+    } 
 .main{
-    background-color: rgb(82, 218, 123);
+    background: url(img/background.png);
+    color: rgb(250, 250, 250);
+     text-align: center;
+     height:900px;
+    
      .header{
+         
          .header__shortabout{
-
+          font-size: 12px; 
+          opacity: $op; 
+          padding: 60px 0 20px 0 ;
          }
          .header__name{
-
+             font-size:27px;
+             padding-bottom: 30px;
+             font-weight: bold;
+             &:after{
+                 content:'';
+                 position: absolute;
+                 width: 70px;
+                 
+                 height: 10px;
+                 left:50%;
+                 background-color: white;
+                 margin: 50px 0 0 -30px;
+             }
          } 
          .header__text {
-             
+         opacity: $op;
+         padding-bottom: 50px;
+
          } 
-            
-      
+            }
+      .worker{
+          display: inline;
+          .worker__column{
+            float:left;
+            width: 100%/4-9%;
+            position: relative;
+
+          .worker__img{
+              
+             max-width: 250px;
+
+
+          }
+          .worker__professian{
+             opacity: $op;
+             font-size:15px;
+             padding: 20px 0 10px 0;
+
+          }
+          .worker__name{
+            font-size:22px;
+            text-transform:uppercase;
+            font-weight: bold;
+          }
+          .worker__about{
+             opacity: $op;
+             font-size:13px;
+             line-height: 2;
+             margin: 5px 10px 0 10px;
+          }
+      }
     }
+    
 }
