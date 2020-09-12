@@ -10,7 +10,7 @@ $op: 0.8; //Прозрачность шрифта
     background: url(img/background.png);
     color: rgb(250, 250, 250);
      text-align: center;
-     height:900px;
+     
     
      .header{
          
@@ -36,19 +36,21 @@ $op: 0.8; //Прозрачность шрифта
          } 
          .header__text {
          opacity: $op;
-         padding-bottom: 50px;
+         padding: 10px 10px 20px 10px;
 
          } 
             }
+            @media (min-width:500px){
       .worker{
-          display: inline;
+          display:flex;
+          justify-content: center;}
           .worker__column{
-            float:left;
+            padding-left: 0px;
             width: 100%/4-9%;
             position: relative;
 
           .worker__img{
-              
+             width:80%; 
              max-width: 250px;
 
 
@@ -73,4 +75,34 @@ $op: 0.8; //Прозрачность шрифта
       }
     }
     
+}
+@media (max-width:500px){
+    .worker__img{
+        width:60%;
+}
+.worker__column{
+    padding: 10px 10px 10px 10px;}
+    .worker__professian{
+        opacity: $op;
+        font-size:15px;
+        padding: 10px 10px 10px 10px;
+
+     }
+     .worker__name{
+       font-size:22px;
+       text-transform:uppercase;
+       font-weight: bold;
+       padding: 10px 10px 10px 10px;
+     }
+     .worker__about{
+        opacity: $op;
+        font-size:13px;
+        line-height: 2;
+        margin: 10px 10px 10px 10px;
+     }
+     .header__text {
+        opacity: $op;
+        padding: 10px 10px 10px 10px;
+
+        } 
 }
